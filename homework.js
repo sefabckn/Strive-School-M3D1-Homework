@@ -48,7 +48,11 @@ console.log(rangeChecker(45, 99))
 
 /* 6. Create a function to create a new string composed of a specified number of copies of a given string. 
     Pass the string and the number of copies as parameters. */
-
+const newStringCreator = function(string, copyNumber) {
+    let newString = string.repeat(parseInt(copyNumber))
+    return newString
+}
+console.log(newStringCreator("strive", 3))
 
 /* 7. Create a function to display the city name if the string begins with "Los" or "New". 
     Pass the city name as a parameter. Return `false` if they start with a different string. */
