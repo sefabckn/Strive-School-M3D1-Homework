@@ -91,12 +91,20 @@ const oneOrThree = function(Arr) {
     }
 }
 console.log(oneOrThree([3, 5]))
-    /* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
-        Return `true` if it doesn't, `false` if it does. */
 
+/* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
+    Return `true` if it doesn't, `false` if it does. */
 
-/* 11. Create a function to find the longest string from a given array of strings. 
-    Pass the array as parameter and return the longest string. */
+const notOneOrThree = function(Arr) {
+    if (Arr.indexOf(1) != -1 || Arr.indexOf(3) != -1) {
+        return false
+    } else {
+        return true
+    }
+}
+console.log(notOneOrThree([4, 5]))
+    /* 11. Create a function to find the longest string from a given array of strings. 
+        Pass the array as parameter and return the longest string. */
 
 
 /* 12. Create a function to find the types of a given angle:
