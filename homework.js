@@ -67,7 +67,10 @@ console.log(cityNameShow("Amsterdam"))
 
 /* 8. Create a function to calculate and return the sum of all elements from an array with 3 elements. 
     Pass the array as a parameter. */
-
+const sumOfAllElements = function(Arr) {
+    return Arr.reduce((a, b) => a + b, 0)
+}
+console.log(sumOfAllElements([1, 2, 3, 4, 5]))
 
 /* 9. Create a function to test if an array of lenght 2 contains 1 OR 3. 
     Return `true` is it does, `false` if it doesn't. */
