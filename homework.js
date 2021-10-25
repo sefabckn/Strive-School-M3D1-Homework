@@ -40,13 +40,11 @@ console.log(findingTheLargest(4, 5, 6))
         Return `true` if they do, return `false` if one (or both) don't. */
 
 const rangeChecker = function(n1, n2) {
-    if (((n1 > 40 && n1 < 60) && (n1 > 70 && n1 < 100)) && ((n2 > 40 && n2 < 60) && (n2 > 70 && n2 < 100))) {
+    if (((n1 > 40 && n1 < 60) || (n1 > 70 && n1 < 100)) && ((n2 > 40 && n2 < 60) || (n2 > 70 && n2 < 100))) {
         return true
-    } else {
-        return false
     }
 }
-rangeChecker(45, 99)
+console.log(rangeChecker(45, 99))
 
 /* 6. Create a function to create a new string composed of a specified number of copies of a given string. 
     Pass the string and the number of copies as parameters. */
