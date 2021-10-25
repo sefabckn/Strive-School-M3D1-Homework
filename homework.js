@@ -40,7 +40,7 @@ console.log(findingTheLargest(4, 5, 6))
         Return `true` if they do, return `false` if one (or both) don't. */
 
 const rangeChecker = function(n1, n2) {
-    if (((n1 > 40 && n1 < 60) || (n1 > 70 && n1 < 100)) && ((n2 > 40 && n2 < 60) || (n2 > 70 && n2 < 100))) {
+    if (((n1 >= 40 && n1 <= 60) || (n1 >= 70 && n1 <= 100)) && ((n2 >= 40 && n2 <= 60) || (n2 >= 70 && n2 <= 100))) { //use return instead of 'if'
         return true
     }
 }
@@ -142,7 +142,9 @@ const typeOfAngle = function(angle) {
 console.log(typeOfAngle(95))
     /* 13. Create a function to find and return the index of the greatest element of a given array of integers that you passed as a parameter. */
 const indexOfGreatestElement = function(array) {
-    let maxValue = Math.max.apply(null, array)
+    console.log(this)
+        //let maxValue = Math.max.apply(null, array) legacy one 
+    let maxValue = Math.max(...array) //ES6 standard
     return array.indexOf(maxValue)
 }
 console.log(indexOfGreatestElement([35, 7, 8, 9, 6, 3, 15]))
