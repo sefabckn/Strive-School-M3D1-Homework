@@ -149,6 +149,18 @@ console.log(indexOfGreatestElement([35, 7, 8, 9, 6, 3, 15]))
 
 
 /* 14. Create a function to find and return the largest **even** number from an array of integers that is passed a parameter. */
+const findGreatestEvenNumber = function(array) {
+    //array[i] % 2 === 0
+    let evenNumber = []
+    for (i = 0; i < array.length; i++) {
+        let element = array[i]
+        if (element % 2 === 0) {
+            evenNumber.push(element)
+        }
+    }
+    return Math.max.apply(null, evenNumber)
+}
+console.log(findGreatestEvenNumber([24, 14, 8, 3, 5, 9]))
 
 
 /* 15. Create a function to check from two given integers (passed as parameters) if one is positive and the other is negative. 
