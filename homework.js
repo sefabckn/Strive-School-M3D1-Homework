@@ -160,12 +160,19 @@ const findGreatestEvenNumber = function(array) {
     }
     return Math.max.apply(null, evenNumber)
 }
-console.log(findGreatestEvenNumber([24, 14, 8, 3, 5, 9]))
+console.log(findGreatestEvenNumber([48, 54, 8, 3, 5, 9])) // Output: 54
 
 
 /* 15. Create a function to check from two given integers (passed as parameters) if one is positive and the other is negative. 
     Return `true` if that's the case, return `false` if it's not. */
-
+const typechecker = function(n1, n2) {
+    if ((n1 < 0 && n2 > 0) || (n2 < 0 && n1 > 0)) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(typechecker(5, -5))
 
 /* 16. Create a function to create and return a new string where the first 3 characters and in lower case and the others are in upper case. 
     If the string's length is less than 3, convert the whole string into uppercase. Pass the original string as a parameter. */
