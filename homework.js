@@ -105,6 +105,17 @@ const notOneOrThree = function(Arr) {
 console.log(notOneOrThree([4, 5]))
     /* 11. Create a function to find the longest string from a given array of strings. 
         Pass the array as parameter and return the longest string. */
+const findingLongestString = function(Arr) {
+    let maxValue = Arr[0]
+    for (i = 0; i < Arr.length; i++) {
+        let element = Arr[i]
+        if (element.length > maxValue.length) {
+            maxValue = element
+        }
+        return maxValue
+    }
+}
+console.log(findingLongestString(["Strive", "School", "Sefa", "Stefano", "Miceli"]))
 
 
 /* 12. Create a function to find the types of a given angle:
