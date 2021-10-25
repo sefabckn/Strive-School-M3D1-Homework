@@ -126,9 +126,26 @@ console.log(findingLongestString(["Strive", "School", "Sefa", "Stefano", "Miceli
 
     Pass the angle as a parameter.
 */
-
-
-/* 13. Create a function to find and return the index of the greatest element of a given array of integers that you passed as a parameter. */
+const typeOfAngle = function(angle) {
+    if (angle > 0 && angle < 90) {
+        return "acute"
+    } else if (angle === 90) {
+        return "right"
+    } else if (angle > 90 && angle < 180) {
+        return "obtuse"
+    } else if (angle === 180) {
+        return "straight"
+    } else {
+        return -1
+    }
+}
+console.log(typeOfAngle(95))
+    /* 13. Create a function to find and return the index of the greatest element of a given array of integers that you passed as a parameter. */
+const indexOfGreatestElement = function(array) {
+    let maxValue = Math.max.apply(null, array)
+    return array.indexOf(maxValue)
+}
+console.log(indexOfGreatestElement([35, 7, 8, 9, 6, 3, 15]))
 
 
 /* 14. Create a function to find and return the largest **even** number from an array of integers that is passed a parameter. */
