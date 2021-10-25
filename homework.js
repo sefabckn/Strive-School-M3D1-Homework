@@ -80,12 +80,19 @@ const sumOfAllElements = function(Arr) { //Used for loop
     console.log(Sum)
 }
 sumOfAllElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-    /* 9. Create a function to test if an array of lenght 2 contains 1 OR 3. 
+
+/* 9. Create a function to test if an array of lenght 2 contains 1 OR 3. 
         Return `true` is it does, `false` if it doesn't. */
-
-
-/* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
-    Return `true` if it doesn't, `false` if it does. */
+const oneOrThree = function(Arr) {
+    if (Arr.includes(1) || Arr.includes(3)) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(oneOrThree([3, 5]))
+    /* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
+        Return `true` if it doesn't, `false` if it does. */
 
 
 /* 11. Create a function to find the longest string from a given array of strings. 
