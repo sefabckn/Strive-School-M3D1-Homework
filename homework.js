@@ -178,12 +178,25 @@ console.log(typechecker(5, -5))
 
 /* 16. Create a function to create and return a new string where the first 3 characters and in lower case and the others are in upper case. 
     If the string's length is less than 3, convert the whole string into uppercase. Pass the original string as a parameter. */
-
-
+    convertString = (str) =>{
+        if(str.length<3){
+            return str.toUpperCase()
+        }else{
+            return str.slice(0,3).toLowerCase() + str.slice(3,).toUpperCase()
+        }
+    }
+console.log(convertString('Strive'))
 /* 17. Create a function to calculate the sum of two integers (passed as parameters). 
     If the sum is in the 50-80 range, return `65`, otherwise, return `80`. */
-
-
+    calculate = (int1,int2) =>{
+        let sum = int1 + int2
+        if(50<sum<80){
+            return '65'
+        }else{
+            return '80'
+        }
+    }
+console.log(calculate(45,9))
 /* 18. Create a function to convert a number (passed as a parameter) into a string, basing yourself on this example: 
     The number has 3 as a factor â‡’ return `Diego`
     The number has 5 as a factor â‡’ return `Riccardo`
@@ -191,7 +204,28 @@ console.log(typechecker(5, -5))
     If the number does not have 3,5, or 7, return the original number. 
     âš ï¸ The factor is an integer which evenly divides a number without leaving a remainder. One number can have more than one factor, in that case you should return both names. 
 Ex. 15 has both 3 and 5 has factors: the function will return `DiegoRiccardo` */
-
-
+numToStringByFactor = (factorNumber) =>{
+    let str = "";
+  
+    if (factorNumber % 3 !== 0 && factorNumber % 7 !== 0 && factorNumber % 5 !== 0) return factorNumber;
+  
+    if (factorNumber % 3 === 0) str += ' ' + "Diego";
+    if (factorNumber % 5 === 0) str += ' ' + "Riccardo";
+    if (factorNumber % 7 === 0) str += ' ' + "Stefano";
+    return str;
+  }
+console.log(numToStringByFactor(15))
 /* 19. Create a function that that takes a phrase as a parameter and returns its acronym.
 Ex. British Broadcasting Corporation returns `BBC` */
+createAcronym = (param) =>{
+    let newArr = [];
+    let splitted = param.split(" ");
+  
+    for (let i = 0; i < splitted.length; i++) {
+      const characters = splitted[i];
+      newArr.push(characters.charAt(0).toUpperCase());
+    }
+  
+    return newArr.join("");
+  }
+console.log(createAcronym('British Broadcasting Corporation'))
